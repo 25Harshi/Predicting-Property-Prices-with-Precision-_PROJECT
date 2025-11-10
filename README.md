@@ -1,124 +1,116 @@
 # Predicting-Property-Prices-with-Precision-_PROJECT
 
-🏡 Precision Property Insights
 
-📌 Project Overview
 
-This project aims to build a predictive model for estimating residential property prices using machine learning and data analytics.
-Traditional valuation methods often depend on human judgment, leading to inconsistent or biased pricing.
-By leveraging structured data — including location, area, amenities, and condition — this model provides accurate, interpretable, and data-driven property valuations.
+# 🏡 **Precision Property Insights**
 
-🎯 Objectives
+---
 
-Identify key factors influencing property prices.
+## 📌 **Project Overview**
 
-Build and compare predictive models (Linear Regression, Decision Tree, Random Forest, XGBoost).
+This project aims to build a **predictive model for estimating residential property prices** using **machine learning and data analytics**.
+Traditional valuation methods often depend on human judgment, leading to **inconsistent or biased pricing**.
+By leveraging structured data — including **location, area, amenities, and condition** — this model provides **accurate, interpretable, and data-driven property valuations**.
 
-Improve accuracy and transparency over manual valuation methods.
+---
 
-Provide actionable insights for buyers, sellers, and investors.
+## 🎯 **Objectives**
 
-📊 Dataset
+* Identify key factors influencing property prices.
+* Build and compare predictive models (**Linear Regression**, **Decision Tree**, **Random Forest**, **XGBoost**).
+* Improve accuracy and transparency over manual valuation methods.
+* Provide actionable insights for **buyers, sellers, and investors**.
 
-Source: Public property listings and historical sales data.
+---
 
-Format: CSV / Excel dataset
+## 📊 **Dataset**
 
-Features include:
+* **Source:** Public property listings and historical sales data.
+* **Format:** CSV / Excel dataset
+* **Features include:**
 
-Location (zipcode, latitude, longitude)
+  * Location (zipcode, latitude, longitude)
+  * Size (living area, lot area, total area)
+  * Rooms (bedrooms, bathrooms)
+  * Amenities, quality, and condition
+  * Sale price (target variable)
 
-Size (living area, lot area, total area)
+---
 
-Rooms (bedrooms, bathrooms)
+## 🧪 **Methodology**
 
-Amenities, quality, and condition
+### 🔍 **Data Preparation**
 
-Sale price (target variable)
+* Handled missing values using **median and mode imputation**.
+* Applied **IQR method** for outlier capping.
+* Scaled numerical features with **StandardScaler**.
+* Encoded categorical variables using **OneHotEncoder**.
+* Applied **log transformation** to normalize the target variable (price).
 
-🧪 Methodology
-🔍 Data Preparation
+---
 
-Handled missing values using median and mode imputation.
+### 📈 **Exploratory Data Analysis (EDA)**
 
-Applied IQR method for outlier capping.
+* Visualized distributions using histograms and boxplots.
+* Analyzed feature correlations with a **heatmap**.
+* Identified top predictors like:
 
-Scaled numerical features with StandardScaler.
+  * Living area
+  * Lot size
+  * Number of bedrooms
+  * Overall quality and condition
 
-Encoded categorical variables using OneHotEncoder.
+---
 
-Applied log transformation to normalize the target variable (price).
+### 🤖 **Modeling**
 
-📈 Exploratory Data Analysis (EDA)
+**Algorithms Used:**
 
-Visualized distributions using histograms and boxplots.
+* Linear Regression
+* Decision Tree Regressor
+* Random Forest Regressor
+* XGBoost Regressor
 
-Analyzed feature correlations with a heatmap.
+**Evaluation Metrics:**
 
-Identified top predictors like:
+* RMSE (Root Mean Squared Error)
+* MAE (Mean Absolute Error)
+* R² Score
 
-Living area
+Models were evaluated using **Cross-Validation** and **GridSearchCV** for parameter tuning.
 
-Lot size
+---
 
-Number of bedrooms
+### 🔍 **Interpretability**
 
-Overall quality and condition
+* Used **SHAP (SHapley Additive exPlanations)** to explain feature importance.
+* Example insight:
 
-🤖 Modeling
+  > “An additional bedroom increases predicted price by approximately **10–12%**, holding other features constant.”
 
-Algorithms Used:
+---
 
-Linear Regression
+## 🛠️ **Tools & Libraries**
 
-Decision Tree Regressor
+* **Language:** Python
+* **Libraries:** pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost, shap, reportlab
+* **Environment:** Jupyter Notebook / Google Colab
 
-Random Forest Regressor
+---
 
-XGBoost Regressor
+## 📤 **Outputs**
 
-Evaluation Metrics:
+* ✅ Cleaned dataset: `cleaned_snapshot_after_EDA.csv`
+* 📊 Model performance comparison table (RMSE, MAE, R²)
+* 🧠 SHAP summary plots for feature impact
+* 📄 Auto-generated final report: `Final_Report.pdf`
+* 📦 Submission package: `submission_package.zip`
 
-RMSE (Root Mean Squared Error)
+---
 
-MAE (Mean Absolute Error)
+## 📈 **Anticipated Outcomes**
 
-R² Score
+* Improved **accuracy and consistency** in property valuation.
+* **Transparent** model interpretation using explainable AI.
+* Scalable and reusable framework for **other cities or property markets**.
 
-Models were evaluated using Cross-Validation and GridSearchCV for parameter tuning.
-
-🔍 Interpretability
-
-Used SHAP (SHapley Additive exPlanations) to explain feature importance.
-
-Example insight:
-
-“An additional bedroom increases predicted price by approximately 10–12%, holding other features constant.”
-
-🛠️ Tools & Libraries
-
-Language: Python
-
-Libraries: pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost, shap, reportlab
-
-Environment: Jupyter Notebook / Google Colab
-
-📤 Outputs
-
-✅ Cleaned dataset: cleaned_snapshot_after_EDA.csv
-
-📊 Model performance comparison table (RMSE, MAE, R²)
-
-🧠 SHAP summary plots for feature impact
-
-📄 Auto-generated final report: Final_Report.pdf
-
-📦 Submission package: submission_package.zip
-
-📈 Anticipated Outcomes
-
-Improved accuracy and consistency in property valuation.
-
-Transparent model interpretation using explainable AI.
-
-Scalable and reusable framework for other cities or property markets.
