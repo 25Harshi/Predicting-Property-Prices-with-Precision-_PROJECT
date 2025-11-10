@@ -1,6 +1,7 @@
 # Predicting-Property-Prices-with-Precision-_PROJECT
 
 🏡 Precision Property Insights
+
 📌 Project Overview
 
 This project aims to build a predictive model for estimating residential property prices using machine learning and data analytics.
